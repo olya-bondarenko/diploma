@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Психолог Ангилина Чемина</title>
+    <title>Психолог Ангелина Чемина</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -35,7 +35,16 @@
       }
       /* font-family: 'Inter', sans-serif;
 font-family: 'Philosopher', sans-serif; */
-      h1,
+
+      h1 {
+        font-family: "Philosopher", sans-serif;
+        font-weight: 700;
+        font-size: 62px;
+        line-height: 130%;
+        padding-top: 50px;
+        color: #424e45;
+      }
+
       h2 {
         font-family: "Philosopher", sans-serif;
         font-weight: 700;
@@ -59,10 +68,11 @@ font-family: 'Philosopher', sans-serif; */
         background-color: #637968;
         height: 90px;
       }
-      .nav-item:hover {
+      /* .nav-item:hover {
         cursor: pointer;
         color: #363f38;
-      }
+      } */
+
       #seminar a {
         color: white;
         text-decoration: none;
@@ -157,6 +167,20 @@ font-family: 'Philosopher', sans-serif; */
     </div>
 
     <!-- header :end -->
+
+    <!-- pre_adout_me : begin -->
+    <section id="pre_adout_me">
+      <div class="container">
+        <h1 class="text-center">Ангелина Чемина</h1>
+        <div class="text-center">
+          <h3 class="imp_numb p-0">Life-коучинг</h3>
+          <h3 class="imp_numb  p-0">Психологические консультации</h3>
+          <h3 class="imp_numb p-0">Тренинги</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- pre_adout_me : end -->
 
     <!-- about_me : begin -->
     <section>
@@ -300,15 +324,15 @@ font-family: 'Philosopher', sans-serif; */
           <h2 class="text-center">Мои достижения</h2>
           <div class="row">
             <div class="col-md-4">
-              <p class="imp_numb">150</p>
+              <p class="imp_numb round-log1"></p>
               <p>довольных клиентов</p>
             </div>
             <div class="col-md-4">
-              <p class="imp_numb">80+</p>
+              <p class="imp_numb round-log2"></p>
               <p>часов супервизии</p>
             </div>
             <div class="col-md-4">
-              <p class="imp_numb">2</p>
+              <p class="imp_numb round-log3"></p>
               <p>онлайн проекта</p>
             </div>
           </div>
@@ -325,7 +349,7 @@ font-family: 'Philosopher', sans-serif; */
         <!-- row 1 -->
         <div class="row mb-5" data-aos="fade-right">
           <!-- data-aos="fade-right" -->
-          <div class="col-12 col-lg-7 order-lg-2">
+          <div class="col-12 col-lg-7">
             <h3>Консультирование</h3>
             <p>
               Психологическое консультирование и психотерапия в моем исполнении
@@ -484,10 +508,8 @@ font-family: 'Philosopher', sans-serif; */
         <!-- row 2 -->
         <div class="row mb-5" data-aos="fade-left">
           <!-- data-aos="fade-left" -->
-          <div class="col-12 col-lg-7 order-md-2 order-last order-md-first">
-            <img src="img/coaching.jpg" alt="Коучинг" class="img-fluid" />
-          </div>
-          <div class="col-12 col-lg-5 pl-3 order-md-1">
+
+          <div class="col-12 col-lg-5 pl-3 order-lg-2">
             <h3>Коучинг</h3>
             <p>
               Коучинг – это особый вид взаимодействия с клиентом, который
@@ -638,6 +660,9 @@ font-family: 'Philosopher', sans-serif; */
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-12 col-lg-7 order-lg-1">
+            <img src="img/coaching.jpg" alt="Коучинг" class="img-fluid" />
           </div>
         </div>
         <!-- row 3 -->
@@ -913,7 +938,36 @@ font-family: 'Philosopher', sans-serif; */
       </footer>
     </section>
     <!-- footer : end -->
-    <script></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+      window.onload = function () {
+        let roundLogEl1 = anime({
+          targets: ".round-log1",
+          innerHTML: [0, 150],
+          easing: "linear",
+          round: 10,
+          duration: 4800,
+          delay: 1000,
+        });
+
+        let roundLogEl2 = anime({
+          targets: ".round-log2",
+          innerHTML: [0, 80],
+          easing: "linear",
+          round: 10,
+          duration: 4800,
+          delay: 1000,
+        });
+        let roundLogEl3 = anime({
+          targets: ".round-log3",
+          innerHTML: [0, 2],
+          easing: "linear",
+          round: 10,
+          duration: 4800,
+          delay: 1000,
+        });
+      };
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
