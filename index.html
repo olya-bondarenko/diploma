@@ -17,7 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Philosopher:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <!-- иконки телефона, мессенджеров -->
+    <script
+      src="https://kit.fontawesome.com/c51ffd85a9.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- анимация -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -39,7 +43,6 @@ font-family: 'Philosopher', sans-serif; */
       h2 {
         font-size: 62px;
         line-height: 130%;
-        /* padding-bottom: 3rem; */
         padding-top: 50px;
         color: #424e45;
       }
@@ -60,8 +63,17 @@ font-family: 'Philosopher', sans-serif; */
         cursor: pointer;
         color: #363f38;
       }
-      a {
+      #seminar a {
         color: white;
+        text-decoration: none;
+        border-bottom: 2px solid white;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .modal_style_in {
+        font-size: 15px;
       }
       .imp_numb {
         font-family: "Philosopher", sans-serif;
@@ -70,11 +82,12 @@ font-family: 'Philosopher', sans-serif; */
         line-height: 48px;
         color: #363f38;
       }
-      .footer {
-        background-color: #637968;
-      }
       .add_info {
         font-size: 14px;
+        color: white;
+      }
+      .fa_icon {
+        color: #3f5145;
       }
       .seminar_card {
         position: relative;
@@ -85,12 +98,20 @@ font-family: 'Philosopher', sans-serif; */
         align-items: flex-end;
         color: white;
       }
+      .footer {
+        background-color: #637968;
+      }
+      .fa_icon_footer {
+        color: white;
+      }
 
-      /* *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      } */
+      /* media */
+
+      @media (max-width: 992px) {
+        .fa-envelope {
+          margin-left: 25px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -143,7 +164,7 @@ font-family: 'Philosopher', sans-serif; */
         <div class="row align-items-center mt-4">
           <div class="col-12 col-lg-6 center order-lg-last">
             <img
-              src="img/portrait3.jpg"
+              src="img/portrait4.jpg"
               alt="Психолог Ангелина Чемина"
               class="img-fluid"
             />
@@ -157,6 +178,122 @@ font-family: 'Philosopher', sans-serif; */
               ним дел?! Для того, чтобы вам было проще решить, можете ли вы мне
               доверять, я расскажу о своем жизненном опыте.
             </p>
+
+            <!-- Кнопка-триггер модального окна -->
+            <button
+              type="button"
+              class="btn shadow-lg p-3 mb-5 bg-white rounded"
+              data-toggle="modal"
+              data-target="#modalAboutMe"
+            >
+              Предлагаю познакомиться->
+            </button>
+
+            <!-- Модальное окно -->
+            <div
+              class="modal fade modal_style_in"
+              id="modalAboutMe"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p>
+                      Первое мое высшее образование в МФТИ совсем не связано с
+                      коучингом и психотерапией, но, тем не менее, очень
+                      положительно отразилось на моей способности логически
+                      мыслить и качественно анализировать поступающую ко мне
+                      информацию.
+                    </p>
+                    <p>
+                      Затем тяга к психологии перевесила, и следующим
+                      образованием была переподготовка по Практической
+                      психологии в МПГУ. А сверху уже легло первое коучинговое
+                      образование в виде повышения квалификации, за ним
+                      последовало и обучение на тренера.
+                    </p>
+
+                    <p>
+                      Но мне показалось, что полученных знаний мало для
+                      действительно глубокой работы с клиентами. Так я оказалась
+                      на своем втором высшем образовании по клинической
+                      психологии в Московском институте психоанализа.
+                    </p>
+
+                    <p>
+                      В МИП я обрастала теоретическими знаниями. А за
+                      практическими отправилась в Международный Эриксоновский
+                      Университет Коучинга, где закончила программу по искусству
+                      трансформационного кучинга и получила международный
+                      сертификат профессионального коуча ICF.
+                    </p>
+
+                    <p>
+                      А для работы с вопросами некоучингового характера я
+                      выбрала направление экзистенциального анализа, которому
+                      обучалась под руководством Альфрида Лэнгле.
+                    </p>
+
+                    <p>
+                      Но это все про учебу… Помимо нее в моей жизни было много
+                      работы, которая влияла на мое профессиональное
+                      формирование ничуть не меньше.
+                    </p>
+
+                    <p>
+                      В консалтинге в сфере управления продажами я прошла путь
+                      от аналитика до ведущего консультанта. Там я познакомилась
+                      с массой совершенно разных по роду деятельности и
+                      структуре компаний, имела возможность работать с
+                      собственниками бизнеса и именно совместно с ними проводить
+                      реорганизацию их компаний.
+                    </p>
+
+                    <p>
+                      Затем, используя опыт работы с данными, также
+                      приобретенный в компании и в моем первом институте, я
+                      погрузилась в мир IT технологий в области работы с
+                      хранилищами данных. Мне посчастливилось поработать в
+                      Тинькофф в потрясающей команде профессионалов. Там я не
+                      только смогла накопить техническую экспертизу, но и
+                      разобраться в бизнес-процессах банка. Данные знания очень
+                      пригодились мне на следующем месте работы, которым стал
+                      Сбербанк, где в роли бизнес-партнера мне удалось
+                      поучаствовать более, чем в 15 проектах. Это место работы
+                      принесло мне колоссальный опыт взаимодействия с людьми
+                      совершенно разных специальностей и должностей, а также
+                      понимание процессов работы крупнейшего банка нашей страны.
+                    </p>
+
+                    <p>
+                      На каждом месте работы я наблюдала, какую огромную роль в
+                      работе компании играет человеческий фактор. Эти наблюдения
+                      укрепили во мне понимание того, что в здоровой и
+                      нацеленной на успех организации должны работать здоровые и
+                      нацеленные на успех люди.
+                    </p>
+
+                    <p>
+                      Поэтому теперь моя деятельность направлена на то, чтобы в
+                      нашем обществе стало больше таких людей – счастливых,
+                      целеустремленных, готовых сроить еще более счастливое
+                      завтра.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-dismiss="modal"
+                      style="color: #3f5145"
+                    >
+                      Закрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div data-aos="fade-down">
@@ -182,12 +319,14 @@ font-family: 'Philosopher', sans-serif; */
     <!-- about_me : end -->
     <!-- services and prices : begin -->
     <section class="services" id="services" data-aos="fade-up">
+      <!-- data-aos="fade-up" -->
       <div class="container pb-5">
-        <h2 class="philosopher mb-2">Услуги</h2>
+        <h2 class="mb-2">Услуги</h2>
         <!-- row 1 -->
         <div class="row mb-5" data-aos="fade-right">
-          <div class="col-12 col-lg-7">
-            <h3>Консультрование</h3>
+          <!-- data-aos="fade-right" -->
+          <div class="col-12 col-lg-7 order-lg-2">
+            <h3>Консультирование</h3>
             <p>
               Психологическое консультирование и психотерапия в моем исполнении
               опираются на основы экзистенциального анализа. Этот процесс
@@ -200,6 +339,139 @@ font-family: 'Philosopher', sans-serif; */
               «зачем?» , то консультирование может оказаться для вас очень
               успешным способом с этим справиться.
             </p>
+            <!-- Кнопка-триггер модального окна -->
+            <button
+              type="button"
+              class="btn shadow-lg p-3 mb-5 bg-white rounded"
+              data-toggle="modal"
+              data-target="#consalting"
+            >
+              Подробнее об условиях
+            </button>
+
+            <!-- Модальное окно -->
+            <div
+              class="modal fade modal_style_in"
+              id="consalting"
+              tabindex="-1"
+              aria-labelledby="consaltingModalLabel1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="consaltingModalLabel">
+                      Консультирование
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12">
+                          <p>
+                            Психологическое консультирование и психотерапия в
+                            моем исполнении опираются на основы
+                            экзистенциального анализа. Этот процесс поможет вам
+                            заглянуть внутрь себя, научиться наблюдать свое
+                            отношение к жизни и эмоции в каждый момент времени.
+                            Вы сможете соприкоснуться со своими ценностями и
+                            глубинными мотивациями.
+                          </p>
+                          <p>
+                            К консультированию можно и нужно обращаться, если
+                            есть ощущение, что из жизни ушли радость и смысл.
+                            Если ваши отношения с кем-то значимым вас тяготят, и
+                            при этом есть ощущение, что от вас в этом случае
+                            мало что зависит… Если внутри вас есть внутренний
+                            дискомфорт и бесконечные вопросы «зачем?» , то
+                            консультирование может оказаться для вас очень
+                            успешным способом с этим справиться.
+                          </p>
+                          <p>
+                            Кроме того, это весьма интересно – узнать себя.
+                            Особенно, если раньше вы чаще опирались на мнение
+                            других при устройстве своей жизни.
+                          </p>
+                          <p>
+                            Консультирование позволяет аккуратно обойти все
+                            наносное, что в нас есть, и вернуться к себе
+                            настоящему.Согласиться со своей жизнью и продолжить
+                            проживать ее осознанно, получая от этого максимум
+                            впечатлений.
+                          </p>
+                          <p>
+                            Также консультирование и терапия могут
+                            предшествовать работе в коучинговом формате. Это
+                            весь эффективно, если есть желание что-то менять в
+                            жизни, но пока даже не понятно, с какой стороны к
+                            этому подойти.
+                          </p>
+                          <p>
+                            В любом случае, психологическое консультирование —
+                            это безопасный и эффективный способ познания себя.
+                            Подумайте над тем, как консультирование могло бы
+                            быть полезно именно для вас…
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <p>
+                            Разовая консультация <strong>от 4500 руб.</strong>
+                            <strong>за 50 минут</strong>
+                          </p>
+                          <p>&#10003; Полная конфиденциальность</p>
+                          <p>
+                            &#10003; 30 минут для ознакомительной бесплатной
+                            консультации
+                          </p>
+                          <p>
+                            &#10003; При отмене консультации менее, чем за 24
+                            часа, клиент оплачивает 50% стоимости консультации
+                          </p>
+                          <p>&#10003; Работа очно и онлайн</p>
+                        </div>
+                      </div>
+
+                      <div class="row justify-content-around py-3">
+                        <a href="tel:+74955555555">
+                          <i class="fa-solid fa_icon fa-phone fa-5x"></i>
+                        </a>
+                        <a
+                          href="https://wa.me/79263710903?text=Здравствуйте!%20Хочу%20записаться%20к%20Вам%20на%20консультацию"
+                          target="_blank"
+                        >
+                          <i class="fa-brands fa_icon fa-whatsapp fa-6x"></i>
+                        </a>
+                        <a href="https://t.me/OlyaBondarenko" target="_blank">
+                          <i class="fa-brands fa_icon fa-telegram fa-6x"></i>
+                        </a>
+                      </div>
+                      <!-- <div class="col-1"></div> -->
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-dismiss="modal"
+                      style="color: #3f5145"
+                    >
+                      Закрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-lg-5">
             <img
@@ -211,10 +483,11 @@ font-family: 'Philosopher', sans-serif; */
         </div>
         <!-- row 2 -->
         <div class="row mb-5" data-aos="fade-left">
-          <div class="col-12 col-lg-7">
+          <!-- data-aos="fade-left" -->
+          <div class="col-12 col-lg-7 order-md-2 order-last order-md-first">
             <img src="img/coaching.jpg" alt="Коучинг" class="img-fluid" />
           </div>
-          <div class="col-12 col-lg-5 pl-3">
+          <div class="col-12 col-lg-5 pl-3 order-md-1">
             <h3>Коучинг</h3>
             <p>
               Коучинг – это особый вид взаимодействия с клиентом, который
@@ -227,10 +500,149 @@ font-family: 'Philosopher', sans-serif; */
               поддерживающую среду и дойти до этой цели, получив от этого
               максимум удовольствия.
             </p>
+            <!-- Кнопка-триггер модального окна -->
+            <button
+              type="button"
+              class="btn shadow-lg p-3 mb-5 bg-white rounded"
+              data-toggle="modal"
+              data-target="#coaching"
+            >
+              Подробнее об условиях
+            </button>
+
+            <!-- Модальное окно -->
+            <div
+              class="modal fade modal_style_in"
+              id="coaching"
+              tabindex="-1"
+              aria-labelledby="coachingModalLabel1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="coachingModalLabel">Коучинг</h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12"></div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <p>
+                            Коучинг – это особый вид взаимодействия с клиентом,
+                            который направлен на раскрытие ценностей и
+                            потенциала клиента для последующей реализации
+                            жизненных целей клиента. Если точнее, то коучинг
+                            дает возможность уточнить цели, наметить пути
+                            реализации, уточнить и актуализировать мотивацию,
+                            создать поддерживающую среду и дойти до этой цели,
+                            получив от этого максимум удовольствия.
+                          </p>
+                          <p>
+                            Есть нюансы! Коуч не выдаст вам готовых решений и
+                            советов, не скажет вам, как правильно. Коуч поможет
+                            вам найти ваши собственные ответы, так как только вы
+                            знаете, что для вас является лучшим решением. А еще
+                            коуч может быть частью той самой поддерживающей
+                            среды, когда вы уже знаете, куда и как вам идти, но
+                            хотите видеть человека рядом, который вас в этом
+                            поддерживает.
+                          </p>
+                          <p>
+                            С чем можно прийти к коучу: <br />
+                            &#10007; Рабочие вопросы во всем их многообразии:
+                            «как решить нерешаемые задачи», «как получить
+                            повышение», «как собрать команду», «как работать с
+                            командой» и т.д.
+                            <br />
+                            &#10007; Вопросы самоопределения: «я не знаю, чем
+                            хочу заниматься по жизни», «мне не нравится то, что
+                            я делаю, но я не знаю, чего хочу», «я хочу делать
+                            что-то, но боюсь и/или не знаю как», «хочу
+                            развиваться, но не знаю куда и как», «хочу развить в
+                            себе какие-то качества или избавиться от
+                            нежелательного поведения». <br />
+                            &#10007; Вопрос наполненности жизни: «мне скучно»,
+                            «хочу найти время на себя и не могу», «хочу чего-то,
+                            но не знаю, чего», «я всего достиг, а что дальше» и
+                            т.д.<br />
+                            &#10007; Вопрос выбора: «где работать», «где жить»,
+                            «увольняться или нет». <br />
+                            &#10007; Вопрос отношений с кем-то значимым: «как
+                            сохранить отношения с кем-то», «как научиться
+                            правильно реагировать». <br />
+                            &#10007; Вопрос мотивации: «хочу выучить английский,
+                            но не могу себя заставить заниматься». <br />
+                          </p>
+                          <p>
+                            И много еще других вопросов можно решить в
+                            коучинговом формате. Записывайтесь на консультацию и
+                            сможете проверить это на собственном опыте.
+                          </p>
+
+                          <p>
+                            Разовая консультация <strong>от 5000 руб.</strong>
+                            <strong>за 50 минут</strong>
+                          </p>
+                          <p>&#10003; Полная конфиденциальность</p>
+                          <p>
+                            &#10003; 15 минут для ознакомительной бесплатной
+                            консультации
+                          </p>
+                          <p>&#10003; При оплате 4 консультаций скидка 15%</p>
+                          <p>
+                            &#10003; При отмене консультации менее, чем за 24
+                            часа, клиент оплачивает 50% стоимости консультации
+                          </p>
+                          <p>&#10003; Работа очно и онлайн</p>
+                        </div>
+                      </div>
+
+                      <div class="row justify-content-around py-3">
+                        <a href="tel:+74955555555">
+                          <i class="fa-solid fa_icon fa-phone fa-5x"></i>
+                        </a>
+                        <a
+                          href="https://wa.me/79263710903?text=Здравствуйте!%20Хочу%20записаться%20к%20Вам%20на%20консультацию"
+                          target="_blank"
+                        >
+                          <i class="fa-brands fa_icon fa-whatsapp fa-6x"></i>
+                        </a>
+                        <a href="https://t.me/OlyaBondarenko" target="_blank">
+                          <i class="fa-brands fa_icon fa-telegram fa-6x"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-dismiss="modal"
+                      style="color: #3f5145"
+                    >
+                      Закрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- row 3 -->
         <div class="row" data-aos="fade-right">
+          <!-- data-aos="fade-right" -->
           <div class="col-12 col-lg-7">
             <h3>Трениги</h3>
             <p>
@@ -248,6 +660,116 @@ font-family: 'Philosopher', sans-serif; */
               Там вы можете получить обратную связь от остальных участников и
               увидеть некоторые вопросы с нового ракурса.
             </p>
+            <!-- Кнопка-триггер модального окна -->
+            <button
+              type="button"
+              class="btn shadow-lg p-3 mb-5 bg-white rounded"
+              data-toggle="modal"
+              data-target="#trainings"
+            >
+              Подробнее об условиях
+            </button>
+
+            <!-- Модальное окно -->
+            <div
+              class="modal fade modal_style_in"
+              id="trainings"
+              tabindex="-1"
+              aria-labelledby="trainingsModalLabel1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="trainingsModalLabel">
+                      Трениги
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <p>Для корпоративных клиентов:</p>
+                          <p>
+                            В современных реалиях важно, чтобы почти каждый
+                            специалист не только выполнял свои должностные
+                            обязанности и эффективно функционировал. Важно,
+                            чтобы ваши сотрудники не выгорали и могли экологично
+                            справляться со стрессовыми ситуациями. Кроме того,
+                            во многих профессиях коммуникативные навыки и
+                            эмпатия напрямую влияют на качество оказываемой
+                            услуги. Все эти задачи хорошо решаются при помощи
+                            тренингов с психологом и коучем. Я с удовольствием
+                            буду сотрудничать в таком формате с компаниями,
+                            которые ценят своих сотрудников и клиентов.
+                          </p>
+                          <p>Для частных клиентов:</p>
+                          <p>
+                            Некоторые психологические вопросы хорошо
+                            прорабатывать в группе. Там вы можете получить
+                            обратную связь от остальных участников и увидеть
+                            некоторые вопросы с нового ракурса. На данный момент
+                            я являюсь со-ведущей открытых психологических групп
+                            «Завтрак со смыслом».
+                          </p>
+                          <p>
+                            В моем арсенале есть еще ряд тренингов по
+                            позитивному настрою, эмоциональному интеллекту и
+                            сказкотерапии.
+                          </p>
+                          <p>
+                            Условия устанавливаются
+                            <strong>индивидуально</strong> в засисимости от
+                            запроса
+                          </p>
+                          <p>&#10003; Группы от 5 до 15 человек</p>
+                          <p>
+                            &#10003; Разовый тренинг или долгосрочная программа
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row justify-content-around py-3">
+                        <a href="tel:+74955555555">
+                          <i class="fa-solid fa_icon fa-phone fa-5x"></i>
+                        </a>
+                        <a
+                          href="https://wa.me/79263710903?text=Здравствуйте!%20Хочу%20записаться%20к%20Вам%20на%20консультацию"
+                          target="_blank"
+                        >
+                          <i class="fa-brands fa_icon fa-whatsapp fa-6x"></i>
+                        </a>
+                        <a href="https://t.me/OlyaBondarenko" target="_blank">
+                          <i class="fa-brands fa_icon fa-telegram fa-6x"></i>
+                        </a>
+                      </div>
+                      <!-- <div class="col-1"></div> -->
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-dismiss="modal"
+                      style="color: #3f5145"
+                    >
+                      Закрыть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-lg-5">
             <img src="img/trainings1.jpg" alt="Тренинги" class="img-fluid" />
@@ -277,7 +799,7 @@ font-family: 'Philosopher', sans-serif; */
                   <span>online</span>
                 </div>
               </div>
-              <div class="col-lg-4 align-self-end text-start text-lg-end">
+              <div class="col-lg-4 align-self-end text-start text-lg-right p-3">
                 <p>
                   <!-- сдалеть модальное окно -->
                   <a
@@ -304,7 +826,7 @@ font-family: 'Philosopher', sans-serif; */
                   <span>Москва</span>
                 </div>
               </div>
-              <div class="col-4 align-self-end text-start text-lg-end">
+              <div class="col-4 align-self-end text-start text-lg-right">
                 <p>
                   <!-- сдалеть модальное окно -->
                   <a
@@ -329,49 +851,55 @@ font-family: 'Philosopher', sans-serif; */
       <footer>
         <div class="container pt-4">
           <div class="row">
-            <div class="col-6 col-md-6">
+            <div class="col-12 col-md-6">
               <p><a href="#about_me">Обо мне</a></p>
               <p><a href="#services">Услуги</a></p>
               <p><a href="#seminar">Семинары</a></p>
             </div>
-            <div class="col-6 col-md-6">
-              <p>
-                <a
-                  href="tel:+74955850930"
-                  class="_icon-call"
-                  style="font-size: 26px; line-height: 9px"
-                ></a>
-                <span class="tab"></span
-                ><a href="tel:+74955850930">+7 (495) 555-55-55</a>
-              </p>
-              <p>
-                <a
-                  href="skype:rusyoga?chat"
-                  class="_icon-skype"
-                  style="font-size: 26px; line-height: 9px"
-                ></a>
-                <span class="tab"></span><a href="skype:rusyoga?chat">\\\\\</a>
-              </p>
-              <p>
-                <a
-                  href="mailto:rusyoga.com@gmail.com?Subject=Вопрос с сайта rusyoga.com"
-                  class="_icon-envelope"
-                  style="font-size: 20px; line-height: 9px"
-                ></a>
-                <span class="tab"></span
-                ><a
-                  href="mailto:rusyoga.com@gmail.com?Subject=Вопрос с сайта rusyoga.com"
-                  >ъъъъъъъ</a
-                >
-              </p>
+            <div class="col-12 col-md-6">
+              <!-- phone&email -->
               <div class="row">
-                <!-- 4иконки -->
+                <div class="col-6 col-md-6">
+                  <nobr>
+                    <a href="tel:+79263710903">
+                      <i class="fa-solid fa_icon_footer fa-phone"></i>
+                    </a>
+                    <a href="tel:+79263710903"> +7 (926) 371-09-03</a>
+                  </nobr>
+                </div>
+
+                <div class="col-6 col-md-6">
+                  <nobr>
+                    <a href="mailto:19olya05@mail.ru"
+                      ><i class="fa-regular fa_icon_footer fa-envelope"></i
+                    ></a>
+                    <a href="mailto:19olya05@mail.ru"> 19olya05@mail.ru</a>
+                  </nobr>
+                </div>
+              </div>
+              <!-- 3 icons -->
+              <div class="row justify-content-around py-3 pr-5">
+                <a
+                  href="https://wa.me/79263710903?text=Здравствуйте!%20Хочу%20записаться%20к%20Вам%20на%20консультацию"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa_icon_footer fa-whatsapp fa-2x"></i>
+                </a>
+                <a href="https://t.me/OlyaBondarenko" target="_blank">
+                  <i class="fa-brands fa_icon_footer fa-telegram fa-2x"></i>
+                </a>
+                <a href="skype:19olya05?chat">
+                  <!-- Не помню свой скайп, поэтому напишу эту учетку -->
+                  <i class="fa-brands fa_icon_footer fa-skype fa-2x"></i>
+                </a>
+                <a href="https://www.youtube.com/"
+                  ><i class="fa-brands fa_icon_footer fa-youtube fa-2x"></i
+                ></a>
               </div>
             </div>
           </div>
           <div class="row pb-3">
-            <div class="col-md-1"></div>
-            <div class="col-md-6 add_info">
+            <div class="col-md-7 add_info">
               <script>
                 document.write(new Date().getFullYear());
               </script>
@@ -386,8 +914,22 @@ font-family: 'Philosopher', sans-serif; */
     </section>
     <!-- footer : end -->
     <script></script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- aos animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      $(window).on("shown.bs.modal", function () {
+        AOS.init({ disable: true });
+      });
+
+      $(window).on("hidden.bs.modal", function () {
+        AOS.init({ disable: false });
+      });
+    </script>
     <script>
       AOS.init({
         easing: "ease-out-back",
@@ -397,11 +939,7 @@ font-family: 'Philosopher', sans-serif; */
         once: true,
       });
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+    <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
