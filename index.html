@@ -66,12 +66,18 @@ font-family: 'Philosopher', sans-serif; */
       }
       .header {
         background-color: #637968;
-        height: 90px;
       }
-      /* .nav-item:hover {
-        cursor: pointer;
-        color: #363f38;
-      } */
+      .header a {
+        color: white;
+      }
+      /* Set the border color */
+      .custom-toggler.navbar-toggler {
+        border-color: white;
+      }
+      /* Setting the stroke to green using rgb values (0, 128, 0) */
+      .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
 
       #seminar a {
         color: white;
@@ -128,38 +134,24 @@ font-family: 'Philosopher', sans-serif; */
     <!-- header : begin -->
 
     <div class="header">
-      <div class="container justify-content-end align-items-end">
-        <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#"></a>
+      <div class="header">
+        <nav class="navbar navbar-expand-lg py-3 shadow-sm">
           <button
-            class="navbar-toggler navbar-dark"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
+            data-target="#navbarContent"
+            aria-controls="navbars"
             aria-expanded="false"
-            aria-label="Переключатель навигации"
+            aria-label="Toggle navigation"
+            class="navbar-toggler custom-toggler"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon custom-toggler"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#about_me"
-                  >Обо мне <span class="sr-only">(текущая)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">Услуги</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#seminar">Семинары</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tel:+74955850930">
-                  <nobr>+7 (495) 555-55-55</nobr>
-                </a>
-              </li>
+          <div id="navbarContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a href="#about_me" class="nav-link">Обо мне</a></li>
+              <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
+              <li class="nav-item"><a href="#seminar" class="nav-link">Семинары</a></li>
             </ul>
           </div>
         </nav>
@@ -870,6 +862,33 @@ font-family: 'Philosopher', sans-serif; */
     </section>
 
     <!-- seminars : end -->
+
+
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+
+<!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА2 -->
+
+
+<!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- footer : begin -->
     <section class="footer">
