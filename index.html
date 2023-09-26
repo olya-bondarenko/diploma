@@ -83,12 +83,17 @@ font-family: 'Philosopher', sans-serif; */
         color: white;
         text-decoration: none;
         border-bottom: 2px solid white;
+        font-size: 20px;
       }
       .footer a {
         color: white;
         text-decoration: none;
       }
       .modal_style_in {
+        font-size: 15px;
+      }
+      .form-style {
+        margin-bottom: 5px;
         font-size: 15px;
       }
       .imp_numb {
@@ -124,8 +129,26 @@ font-family: 'Philosopher', sans-serif; */
       /* media */
 
       @media (max-width: 992px) {
+        h1 {
+          font-size: 50px;
+          padding-top: 50px;
+        }
+        h3 {
+          font-size: 32px;
+        }
         .fa-envelope {
           margin-left: 25px;
+        }
+      }
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 36px;
+          padding-top: 30px;
+          line-height: 2.5rem;
+        }
+        h3 {
+          font-size: 24 px;
+          padding-bottom: 30px;
         }
       }
     </style>
@@ -149,9 +172,15 @@ font-family: 'Philosopher', sans-serif; */
           </button>
           <div id="navbarContent" class="collapse navbar-collapse">
             <ul class="navbar-nav mx-auto">
-              <li class="nav-item"><a href="#about_me" class="nav-link">Обо мне</a></li>
-              <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
-              <li class="nav-item"><a href="#seminar" class="nav-link">Семинары</a></li>
+              <li class="nav-item">
+                <a href="#about_me" class="nav-link">Обо мне</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Услуги</a>
+              </li>
+              <li class="nav-item">
+                <a href="#seminar" class="nav-link">Семинары</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -165,9 +194,9 @@ font-family: 'Philosopher', sans-serif; */
       <div class="container">
         <h1 class="text-center">Ангелина Чемина</h1>
         <div class="text-center">
-          <h3 class="imp_numb p-0">Life-коучинг</h3>
-          <h3 class="imp_numb  p-0">Психологические консультации</h3>
-          <h3 class="imp_numb p-0">Тренинги</h3>
+          <h4 class="p-0">Life-коучинг</h3>
+          <h4 class="p-0">Психологические консультации</h3>
+          <h4 class="p-0">Тренинги</h3>
         </div>
       </div>
     </section>
@@ -804,91 +833,391 @@ font-family: 'Philosopher', sans-serif; */
 
         <!-- card 1 -->
         <div style="background-image: url(img/card1.jpg)" class="img-fluid">
-          <div class="container-fluid seminar_card mb-5">
+          <div class="container seminar_card mb-5">
             <div class="row">
               <div class="col-lg-8">
                 <div class="p-5">
                   <h4>
                     Международная программа профессиональной переподготовки
-                    "Мультимодальная терапия творчеством"
+                    &#34;Мультимодальная терапия творчеством&#34;
                   </h4>
                   <span>3 ноября 2023 г. - 14 июля 2024 г.</span>
                   <span>online</span>
                 </div>
               </div>
-              <div class="col-lg-4 align-self-end text-start text-lg-right p-3">
+              <div
+                class="col-lg-4 align-self-end text-center text-lg-right p-3"
+              >
                 <p>
-                  <!-- сдалеть модальное окно -->
                   <a
-                    href="https://psychol.ru/additional/professionalnaya-perepodgotovka/multimodalnaya-terapiya-tvorchestvom-nachalo-obucheniya-3-noyabrya-2023-g"
+                    href=""
+                    type="button"
+                    class="btn"
+                    data-toggle="modal"
+                    data-target="#seminar1Modal"
                     >Узнать подробнее</a
                   >
                 </p>
               </div>
             </div>
           </div>
-          <a
-            href="https://psychol.ru/additional/professionalnaya-perepodgotovka/multimodalnaya-terapiya-tvorchestvom-nachalo-obucheniya-3-noyabrya-2023-g"
-          ></a>
         </div>
 
         <!-- card 2 -->
         <div style="background-image: url(img/card2.jpg)" class="img-fluid">
-          <div class="container-fluid seminar_card mb-5">
+          <div class="container seminar_card mb-5">
             <div class="row">
-              <div class="col-8">
+              <div class="col-lg-8">
                 <div class="p-5">
                   <h4>Наука и искусство трансфомационного коучинга</h4>
                   <span>3 ноября 2023 г. - 14 июля 2024 г.</span>
                   <span>Москва</span>
                 </div>
               </div>
-              <div class="col-4 align-self-end text-start text-lg-right">
+              <div
+                class="col-lg-4 align-self-end text-center text-lg-right p-3"
+              >
                 <p>
-                  <!-- сдалеть модальное окно -->
                   <a
-                    href="http://erickson.ru/trainings/serification-trainings/coaching-new-leadership-opportunities.htm"
+                    href=""
+                    type="button"
+                    class="btn"
+                    data-toggle="modal"
+                    data-target="#seminar2Modal"
                     >Узнать подробнее</a
                   >
                 </p>
               </div>
             </div>
           </div>
-          <a
-            href="http://erickson.ru/trainings/serification-trainings/coaching-new-leadership-opportunities.htm"
-          ></a>
         </div>
       </div>
     </section>
 
     <!-- seminars : end -->
 
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+    <div
+      class="modal fade modal_style_in"
+      id="seminar1Modal"
+      tabindex="-1"
+      aria-labelledby="seminar1ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="seminar1ModalLabel">
+              Наука и искусство трансфомационного коучинга
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Приглашаются на обучение специалисты, использующие творчество и
+              разные виды искусства в своей практике: психологи и
+              психотерапевты, педагоги и преподаватели арт-дисциплин; социальные
+              работники и специалисты по специальной педагогике; бизнес-тренеры,
+              медиаторы и консультанты; медицинские работники и другие.
+            </p>
 
-<!-- МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+            <p>
+              Программа для неравнодушных и творческих личностей, для тех, кто
+              находится все время в поиске новых технологий и методов. На
+              сегодняшний день это единственная в России программа, которая
+              обучает методологии процесса использования творческой деятельности
+              и всех выразительных искусств и формирует умения создавать
+              собственные уникальные арт-технологии, а не тренирует навыки в
+              использовании уже известных арт-техник и упражнений на разные
+              темы.
+            </p>
 
-<!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+            <p>
+              Это программа для людей, которые помогают другим учиться, изменять
+              свою жизнь, развивать бизнес, восстанавливать психическое и
+              физическое здоровье, адаптироваться в различных трудных жизненных
+              ситуациях, создавать и реализовывать социальные и творческие
+              проекты, открывать новые возможности и ресурсы, помогают созидать,
+              со-творять и выражать в рисовании, музыке, театре, танце и прочее,
+              прочее, прочее. Это программа для тех практиков помогающих
+              отношений, которым нравится и зовет все, что связано с творчеством
+              и искусством — танцевать или рисовать, петь или читать, писать или
+              играть, создавать видеоролики или фотографировать, кулинарить или
+              делать кукол, и прочее, прочее, прочее.
+            </p>
 
-<!-- МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА2 -->
+            <p>
+              Новые веяния в Арт-терапии — это арт-встреча всех направлений
+              искусств — танца и музыки, живописи, рисунка, скульптуры,
+              инсталляции и театра, поэзии и мультимедиа. Когда мы открываем все
+              модальности искусств, мы открываем возможности и природную силу к
+              трансформации и изменениям и в человеке, и в обществе.
+            </p>
 
+            <p>
+              По окончании программы выдается диплом о переподготовке ИППиП на
+              право ведения профессиональной деятельности в сфере
+              мультимодальной терапии.
+            </p>
 
-<!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
+            <p>
+              <strong>Структура программы:</strong><br />
+              Общее количество - 330 ак/ч. 2023-2024 учебный год включает две
+              части. Семинары (очная часть) - 160 академических часов;
+              Дистанционная часть - 170 академических часов.
+            </p>
 
+            <form action="">
+              <label for="name">Имя <span class="text-danger">*</span> </label>
+              <input
+                type="text"
+                class="form-control form-style"
+                id="name"
+                name="name"
+                required
+                autocomplete="username"
+              />
+              <label for="lastname"
+                >Фамилия <span class="text-danger">*</span>
+              </label>
+              <input type="text" class="form-control form-style" id="lastname"
+              name="lastname" /*placeholder="Фамилия"*/ required
+              autocomplete="username" /*onfocus="this.placeholder=''"*/
+              /*onblur="this.placeholder='Фамилия'"*/ />
+              <label for="phone"
+                >Контактный телефон<span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control form-style"
+                id="phone"
+                name="phone"
+                placeholder="+7 XXX XXX-XX-XX"
+                required
+                autocomplete="username"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='+7 XXX XXX-XX-XX'"
+              />
+              <label for="email"
+                >Адрес электронной почты<span class="text-danger">*</span>
+              </label>
+              <input
+                type="email"
+                class="form-control form-style"
+                id="email"
+                name="email"
+                placeholder="email@example.com"
+                required
+                autocomplete="username"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='email@example.com'"
+              />
+              <label for="comment">Комментарий </label>
+              <input
+                type="text"
+                class="form-control form-style"
+                id="comment"
+                name="comment"
+              />
+            </form>
 
+            <p class="text-muted">
+              Нажимая на кнопку "Подать заявку", вы соглашаетесь с политикой
+              конфиденциальности
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn"
+              style="background-color: #3f5145; color: white"
+              value="Подать заявку на участие"
+            >
+              Подать заявку
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-dismiss="modal"
+              style="color: #3f5145"
+            >
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА1 -->
 
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА2 -->
+    <div
+      class="modal fade modal_style_in"
+      id="seminar2Modal"
+      tabindex="-1"
+      aria-labelledby="seminar2ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="seminar2ModalLabel">
+              Наука и искусство трансфомационного коучинга
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              В настоящее время в 25 ключевых областях промышленности, от
+              телекоммуникаций до охраны здоровья и строительства, появляются
+              новейшие технологии. Эти новые технологии полностью изменяют
+              требования к навыкам и компетенциям людей, и, соответственно,
+              отношение людей к миру.
+            </p>
+            <p>
+              Чем же принципиально отличается современный лидер компании от
+              руководителя старого образца?
+            </p>
+            <p>
+              "Новый лидер - это лидер, который очень настойчиво идёт к чёткому
+              видению, даже если другие его ещё пока не достигают. Сильный лидер
+              должен отстаивать свою позицию, убеждать людей в том, что это
+              возможно, и он магнетически притягивает людей к своему видению …
+              Великий менеджер должен чётко осознавать все навыки каждого, кто
+              работает вместе с ним….. Мы называем это коучинг-подход к
+              лидерству".
+            </p>
 
+            <p>
+              <strong>Сертифицированная программа обучения коучингу</strong>
+              состоит из 4 учебных модулей.
+            </p>
+            <p>
+              Каждый модуль - это 4 полных дня обучения (с 10.00 до 18.30),
+              дополнительные межмодульные встречи по гибкому расписанию, а также
+              межмодульная коучинговая практика. Для каждой группы свой формат
+              обучения - очный или онлайн.
+            </p>
 
+            <strong>Стоимость программы</strong>
 
+            <p>
+              Стоимость одного модуля программы: <br />
+              65 000 рублей онлайн группа <br />
+              70 000 рублей очная группа (Москва) <br />
+            </p>
 
+            <p>
+              Скидка 10% - предоставляется при единовременной оплате всех 4х
+              модулей программы. <br />
+              Таким образом самая выгодная стоимость программы составит: <br />
+              <strike>260 000 рублей</strike><br />
+              - 234 200 рублей онлайн группа<br />
 
+              <strike>280 000 рублей</strike><br />
+              - 252 200 рублей очная группа (Москва) <br />
+            </p>
+            <p>
+              Для кого эта программа: <br />
+              Обучение коучингу для владельцев и директоров компаний,
+              руководителей подразделений, директоров по персоналу. А также для
+              бизнес-тренеров, бизнес-консультантов, психологов работающих с
+              первыми лицами.
+            </p>
+            <form action="">
+              <label for="name">Имя <span class="text-danger">*</span> </label>
+              <input
+                type="text"
+                class="form-control form-style"
+                id="name"
+                name="name"
+                required
+                autocomplete="username"
+              />
+              <label for="lastname"
+                >Фамилия <span class="text-danger">*</span>
+              </label>
+              <input type="text" class="form-control form-style" id="lastname"
+              name="lastname" /*placeholder="Фамилия"*/ required
+              autocomplete="username" /*onfocus="this.placeholder=''"*/
+              /*onblur="this.placeholder='Фамилия'"*/ />
+              <label for="phone"
+                >Контактный телефон<span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control form-style"
+                id="phone"
+                name="phone"
+                placeholder="+7 XXX XXX-XX-XX"
+                required
+                autocomplete="username"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='+7 XXX XXX-XX-XX'"
+              />
+              <label for="email"
+                >Адрес электронной почты<span class="text-danger">*</span>
+              </label>
+              <input
+                type="email"
+                class="form-control form-style"
+                id="email"
+                name="email"
+                placeholder="email@example.com"
+                required
+                autocomplete="username"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='email@example.com'"
+              />
+              <label for="comment">Комментарий </label>
+              <input
+                type="text"
+                class="form-control form-style"
+                id="comment"
+                name="comment"
+              />
+            </form>
 
-
-
-
-
-
-
-
-
+            <p class="text-muted">
+              Нажимая на кнопку "Подать заявку", вы соглашаетесь с политикой
+              конфиденциальности
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn"
+              style="background-color: #3f5145; color: white"
+              value="Подать заявку на участие"
+            >
+              Подать заявку
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-dismiss="modal"
+              style="color: #3f5145"
+            >
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- КОНЕЦ МОДАЛЬНОЕ ОКНО ДЛЯ СЕМИНАРА2 -->
 
     <!-- footer : begin -->
     <section class="footer">
