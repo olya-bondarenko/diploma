@@ -530,9 +530,7 @@
 
 <?php
 header('Content-Type; text/html; charset=utf-8');
-
 $mysqli = mysqli_connect("localhost", "thzjjdpc_seminar1", "hnSTUIeT", "thzjjdpc_seminar1");
-
 if ($mysqli == false) {
   print("error");
 } else {
