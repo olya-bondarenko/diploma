@@ -526,7 +526,7 @@
       }
     </script>
 
-Листинг 12.
+Листинг 11.
 
 <?php
 header('Content-Type; text/html; charset=utf-8');
@@ -550,7 +550,7 @@ if ($mysqli == false) {
 };
 ?>
 
-Листинг 13.
+Листинг 12.
 
 Исходные файлы проекта можно просмотреть на GitHub по ссылке [https://github.com/olya-bondarenko/diploma](https://github.com/olya-bondarenko/diploma).
 
