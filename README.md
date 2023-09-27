@@ -549,7 +549,7 @@ if ($mysqli == false) {
     $mysqli->query("INSERT INTO `tabl_seminar2`( `name`, `lastmane`, `phone`, `email`, `comment`) VALUES ('$name2', '$lastname2', '$phone2', '$email2', '$comment2')");
     print("ok");
   }
-};
+};?>
 
 Листинг 13.
 
