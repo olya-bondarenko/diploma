@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Психолог Ангелина Чемина</title>
     <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,9 +39,6 @@
       src="https://kit.fontawesome.com/c51ffd85a9.js"
       crossorigin="anonymous"
     ></script>
-    <!-- анимация -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <style>
       html {
         scroll-behavior: smooth;
@@ -33,9 +47,29 @@
         font-family: "Inter", sans-serif;
         font-size: 18px;
       }
-      /* font-family: 'Inter', sans-serif;
-font-family: 'Philosopher', sans-serif; */
-
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 50px;
+          padding-top: 50px;
+        }
+        h3 {
+          font-size: 32px;
+        }
+        .fa-envelope {
+          margin-left: 25px;
+        }
+      }
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 36px;
+          padding-top: 30px;
+          line-height: 2.5rem;
+        }
+        h3 {
+          font-size: 24 px;
+          padding-bottom: 30px;
+        }
+      }
       h1 {
         font-family: "Philosopher", sans-serif;
         font-weight: 700;
@@ -44,7 +78,6 @@ font-family: 'Philosopher', sans-serif; */
         padding-top: 50px;
         color: #424e45;
       }
-
       h2 {
         font-family: "Philosopher", sans-serif;
         font-weight: 700;
@@ -78,12 +111,14 @@ font-family: 'Philosopher', sans-serif; */
       .custom-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
       }
-
       #seminar a {
         color: white;
         text-decoration: none;
         border-bottom: 2px solid white;
         font-size: 20px;
+      }
+      .seminar_card:hover {
+        background-color: rgba(182, 192, 185, 0.3);
       }
       .footer a {
         color: white;
@@ -125,68 +160,40 @@ font-family: 'Philosopher', sans-serif; */
       .fa_icon_footer {
         color: white;
       }
-
-      /* media */
-
-      @media (max-width: 992px) {
-        h1 {
-          font-size: 50px;
-          padding-top: 50px;
-        }
-        h3 {
-          font-size: 32px;
-        }
-        .fa-envelope {
-          margin-left: 25px;
-        }
-      }
-      @media (max-width: 767px) {
-        h1 {
-          font-size: 36px;
-          padding-top: 30px;
-          line-height: 2.5rem;
-        }
-        h3 {
-          font-size: 24 px;
-          padding-bottom: 30px;
-        }
-      }
     </style>
+    <!-- анимация -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- header : begin -->
-
     <div class="header">
-      <div class="header">
-        <nav class="navbar navbar-expand-lg py-3 shadow-sm">
-          <button
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarContent"
-            aria-controls="navbars"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            class="navbar-toggler custom-toggler"
-          >
-            <span class="navbar-toggler-icon custom-toggler"></span>
-          </button>
-          <div id="navbarContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a href="#about_me" class="nav-link">Обо мне</a>
-              </li>
-              <li class="nav-item">
-                <a href="#services" class="nav-link">Услуги</a>
-              </li>
-              <li class="nav-item">
-                <a href="#seminar" class="nav-link">Семинары</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <nav class="navbar navbar-expand-lg py-3 shadow-sm">
+        <button
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbars"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler custom-toggler"
+        >
+          <span class="navbar-toggler-icon custom-toggler"></span>
+        </button>
+        <div id="navbarContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="#about_me" class="nav-link">Обо мне</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Услуги</a>
+            </li>
+            <li class="nav-item">
+              <a href="#seminar" class="nav-link">Семинары</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-
     <!-- header :end -->
 
     <!-- pre_adout_me : begin -->
@@ -200,7 +207,6 @@ font-family: 'Philosopher', sans-serif; */
         </div>
       </div>
     </section>
-
     <!-- pre_adout_me : end -->
 
     <!-- about_me : begin -->
@@ -325,16 +331,16 @@ font-family: 'Philosopher', sans-serif; */
                       целеустремленных, готовых сроить еще более счастливое
                       завтра.
                     </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-dismiss="modal"
-                      style="color: #3f5145"
-                    >
-                      Закрыть
-                    </button>
+                    <div class="row justify-content-end">
+                      <button
+                        type="button"
+                        class="btn"
+                        data-dismiss="modal"
+                        style="color: #3f5145"
+                      >
+                        Закрыть
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -360,8 +366,8 @@ font-family: 'Philosopher', sans-serif; */
         </div>
       </div>
     </section>
-
     <!-- about_me : end -->
+
     <!-- services and prices : begin -->
     <section class="services" id="services" data-aos="fade-up">
       <!-- data-aos="fade-up" -->
@@ -501,18 +507,17 @@ font-family: 'Philosopher', sans-serif; */
                           <i class="fa-brands fa_icon fa-telegram fa-6x"></i>
                         </a>
                       </div>
-                      <!-- <div class="col-1"></div> -->
+                      <div class="row justify-content-end mt-5">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-dismiss="modal"
+                          style="color: #3f5145"
+                        >
+                          Закрыть
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-dismiss="modal"
-                      style="color: #3f5145"
-                    >
-                      Закрыть
-                    </button>
                   </div>
                 </div>
               </div>
@@ -523,6 +528,7 @@ font-family: 'Philosopher', sans-serif; */
               src="img/consalting.jpg"
               alt="Консультрование"
               class="img-fluid"
+              loading="lazy"
             />
           </div>
         </div>
@@ -576,10 +582,6 @@ font-family: 'Philosopher', sans-serif; */
                   </div>
                   <div class="modal-body">
                     <div class="container-fluid">
-                      <div class="row">
-                        <div class="col-12"></div>
-                      </div>
-
                       <div class="row">
                         <div class="col-12">
                           <p>
@@ -666,24 +668,29 @@ font-family: 'Philosopher', sans-serif; */
                           <i class="fa-brands fa_icon fa-telegram fa-6x"></i>
                         </a>
                       </div>
+                      <div class="row justify-content-end mt-5">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-dismiss="modal"
+                          style="color: #3f5145"
+                        >
+                          Закрыть
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-dismiss="modal"
-                      style="color: #3f5145"
-                    >
-                      Закрыть
-                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-lg-7 order-lg-1">
-            <img src="img/coaching.jpg" alt="Коучинг" class="img-fluid" />
+            <img
+              src="img/coaching.jpg"
+              alt="Коучинг"
+              class="img-fluid"
+              loading="lazy"
+            />
           </div>
         </div>
         <!-- row 3 -->
@@ -776,7 +783,7 @@ font-family: 'Philosopher', sans-serif; */
                           </p>
                           <p>
                             Условия устанавливаются
-                            <strong>индивидуально</strong> в засисимости от
+                            <strong>индивидуально</strong> в зависимости от
                             запроса
                           </p>
                           <p>&#10003; Группы от 5 до 15 человек</p>
@@ -800,25 +807,29 @@ font-family: 'Philosopher', sans-serif; */
                           <i class="fa-brands fa_icon fa-telegram fa-6x"></i>
                         </a>
                       </div>
-                      <!-- <div class="col-1"></div> -->
+                      <div class="row justify-content-end mt-5">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-dismiss="modal"
+                          style="color: #3f5145"
+                        >
+                          Закрыть
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-dismiss="modal"
-                      style="color: #3f5145"
-                    >
-                      Закрыть
-                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-lg-5">
-            <img src="img/trainings1.jpg" alt="Тренинги" class="img-fluid" />
+            <img
+              src="img/trainings1.jpg"
+              alt="Тренинги"
+              class="img-fluid"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -832,7 +843,15 @@ font-family: 'Philosopher', sans-serif; */
         <h2 class="philosopher pb-5">Семинары</h2>
 
         <!-- card 1 -->
-        <div style="background-image: url(img/card1.jpg)" class="img-fluid">
+        <div
+          style="background-image: url(img/card1.jpg)"
+          loading="lazy"
+          class="img-fluid"
+          type="button"
+          class="btn"
+          data-toggle="modal"
+          data-target="#seminar1Modal"
+        >
           <div class="container seminar_card mb-5">
             <div class="row">
               <div class="col-lg-8">
@@ -864,7 +883,15 @@ font-family: 'Philosopher', sans-serif; */
         </div>
 
         <!-- card 2 -->
-        <div style="background-image: url(img/card2.jpg)" class="img-fluid">
+        <div
+          style="background-image: url(img/card2.jpg)"
+          loading="lazy"
+          class="img-fluid"
+          type="button"
+          class="btn"
+          data-toggle="modal"
+          data-target="#seminar2Modal"
+        >
           <div class="container seminar_card mb-5">
             <div class="row">
               <div class="col-lg-8">
@@ -974,87 +1001,99 @@ font-family: 'Philosopher', sans-serif; */
               Дистанционная часть - 170 академических часов.
             </p>
 
-            <form action="">
-              <label for="name1">Имя <span class="text-danger">*</span> </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="name1"
-                name="name1"
-                required
-                autocomplete="username"
-              />
-              <label for="lastname1"
-                >Фамилия <span class="text-danger">*</span>
-              </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="lastname1"
-                name="lastname1"
-                required
-                autocomplete="username"
-              />
+            <form onsubmit="sendApplication1(this); return false;">
+              <div class="form-group">
+                <label for="name1"
+                  >Имя <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="name1"
+                  name="name1"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastname1"
+                  >Фамилия <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="lastname1"
+                  name="lastname1"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone2"
+                  >Контактный телефон<span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="phone1"
+                  name="phone1"
+                  placeholder="+7 XXX XXX-XX-XX"
+                  required
+                  autocomplete="tel"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='+7 XXX XXX-XX-XX'"
+                  maxlength="13"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email1"
+                  >Адрес электронной почты<span class="text-danger">*</span>
+                </label>
+                <input
+                  type="email"
+                  class="form-control form-style"
+                  id="email1"
+                  name="email1"
+                  placeholder="email@example.com"
+                  required
+                  autocomplete="email"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='email@example.com'"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment1">Комментарий </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="comment1"
+                  name="comment1"
+                />
+              </div>
 
-              <label for="phone1"
-                >Контактный телефон<span class="text-danger">*</span>
-              </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="phone1"
-                name="phone1"
-                placeholder="+7 XXX XXX-XX-XX"
-                required
-                autocomplete="username"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='+7 XXX XXX-XX-XX'"
-              />
-              <label for="email1"
-                >Адрес электронной почты<span class="text-danger">*</span>
-              </label>
-              <input
-                type="email"
-                class="form-control form-style"
-                id="email1"
-                name="email1"
-                placeholder="email@example.com"
-                required
-                autocomplete="username"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='email@example.com'"
-              />
-              <label for="comment1">Комментарий </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="comment1"
-                name="comment1"
-              />
+              <p class="text-muted">
+                Нажимая на кнопку "Подать заявку", вы соглашаетесь с политикой
+                конфиденциальности
+              </p>
+              <div class="row justify-content-end">
+                <button
+                  type="submit"
+                  class="btn"
+                  style="background-color: #3f5145; color: white"
+                  value="Подать заявку на участие"
+                >
+                  Подать заявку
+                </button>
+                <button
+                  type="button"
+                  class="btn"
+                  data-dismiss="modal"
+                  style="color: #3f5145"
+                >
+                  Закрыть
+                </button>
+              </div>
             </form>
-
-            <p class="text-muted">
-              Нажимая на кнопку "Подать заявку", вы соглашаетесь с политикой
-              конфиденциальности
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="submit"
-              class="btn"
-              style="background-color: #3f5145; color: white"
-              value="Подать заявку на участие"
-            >
-              Подать заявку
-            </button>
-            <button
-              type="button"
-              class="btn"
-              data-dismiss="modal"
-              style="color: #3f5145"
-            >
-              Закрыть
-            </button>
           </div>
         </div>
       </div>
@@ -1143,85 +1182,98 @@ font-family: 'Philosopher', sans-serif; */
               первыми лицами.
             </p>
             <form onsubmit="sendApplication2(this); return false;">
-              <label for="name2">Имя <span class="text-danger">*</span> </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="name2"
-                name="name2"
-                required
-                autocomplete="username"
-              />
-              <label for="lastname2"
-                >Фамилия <span class="text-danger">*</span>
-              </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="lastname2"
-                name="lastname2"
-                required
-                autocomplete="username"
-              />
-              <label for="phone2"
-                >Контактный телефон<span class="text-danger">*</span>
-              </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="phone2"
-                name="phone2"
-                placeholder="+7 XXX XXX-XX-XX"
-                required
-                autocomplete="username"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='+7 XXX XXX-XX-XX'"
-              />
-              <label for="email2"
-                >Адрес электронной почты<span class="text-danger">*</span>
-              </label>
-              <input
-                type="email"
-                class="form-control form-style"
-                id="email2"
-                name="email2"
-                placeholder="email@example.com"
-                required
-                autocomplete="username"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='email@example.com'"
-              />
-              <label for="comment2">Комментарий </label>
-              <input
-                type="text"
-                class="form-control form-style"
-                id="comment2"
-                name="comment2"
-              />
-            </form>
+              <div class="form-group">
+                <label for="name2"
+                  >Имя <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="name2"
+                  name="name2"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastname2"
+                  >Фамилия <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="lastname2"
+                  name="lastname2"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone2"
+                  >Контактный телефон<span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="phone2"
+                  name="phone2"
+                  placeholder="+7 XXX XXX-XX-XX"
+                  required
+                  autocomplete="tel"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='+7 XXX XXX-XX-XX'"
+                  maxlength="13"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email2"
+                  >Адрес электронной почты<span class="text-danger">*</span>
+                </label>
+                <input
+                  type="email"
+                  class="form-control form-style"
+                  id="email2"
+                  name="email2"
+                  placeholder="email@example.com"
+                  required
+                  autocomplete="email"
+                  onfocus="this.placeholder=''"
+                  onblur="this.placeholder='email@example.com'"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment2">Комментарий </label>
+                <input
+                  type="text"
+                  class="form-control form-style"
+                  id="comment2"
+                  name="comment2"
+                />
+              </div>
 
-            <p class="text-muted">
-              Нажимая на кнопку "Подать заявку", вы соглашаетесь с политикой
-              конфиденциальности
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="submit"
-              class="btn"
-              style="background-color: #3f5145; color: white"
-              value="Подать заявку на участие"
-            >
-              Подать заявку
-            </button>
-            <button
-              type="button"
-              class="btn"
-              data-dismiss="modal"
-              style="color: #3f5145"
-            >
-              Закрыть
-            </button>
+              <p class="text-muted">
+                Нажимая на кнопку "Подать заявку", вы соглашаетесь с политикой
+                конфиденциальности
+              </p>
+              <div class="row justify-content-end">
+                <button
+                  type="submit"
+                  class="btn"
+                  style="background-color: #3f5145; color: white"
+                  value="Подать заявку на участие"
+                >
+                  Подать заявку
+                </button>
+                <button
+                  type="button"
+                  class="btn"
+                  data-dismiss="modal"
+                  style="color: #3f5145"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -1249,7 +1301,6 @@ font-family: 'Philosopher', sans-serif; */
                     <a href="tel:+79263710903"> +7 (926) 371-09-03</a>
                   </nobr>
                 </div>
-
                 <div class="col-6 col-md-6">
                   <nobr>
                     <a href="mailto:19olya05@mail.ru"
@@ -1259,7 +1310,6 @@ font-family: 'Philosopher', sans-serif; */
                   </nobr>
                 </div>
               </div>
-              <!-- 3 icons -->
               <div class="row justify-content-around py-3 pr-5">
                 <a
                   href="https://wa.me/79263710903?text=Здравствуйте!%20Хочу%20записаться%20к%20Вам%20на%20консультацию"
@@ -1271,7 +1321,6 @@ font-family: 'Philosopher', sans-serif; */
                   <i class="fa-brands fa_icon_footer fa-telegram fa-2x"></i>
                 </a>
                 <a href="skype:19olya05?chat">
-                  <!-- Не помню свой скайп, поэтому напишу эту учетку -->
                   <i class="fa-brands fa_icon_footer fa-skype fa-2x"></i>
                 </a>
                 <a href="https://www.youtube.com/"
@@ -1304,7 +1353,8 @@ font-family: 'Philosopher', sans-serif; */
           easing: "linear",
           round: 10,
           duration: 4800,
-          delay: 1000,
+          delay: 2000,
+          offset: 50,
         });
 
         let roundLogEl2 = anime({
@@ -1313,7 +1363,8 @@ font-family: 'Philosopher', sans-serif; */
           easing: "linear",
           round: 10,
           duration: 4800,
-          delay: 1000,
+          delay: 2000,
+          offset: 50,
         });
         let roundLogEl3 = anime({
           targets: ".round-log3",
@@ -1321,7 +1372,8 @@ font-family: 'Philosopher', sans-serif; */
           easing: "linear",
           round: 10,
           duration: 4800,
-          delay: 1000,
+          delay: 2000,
+          offset: 50,
         });
       };
     </script>
@@ -1353,17 +1405,32 @@ font-family: 'Philosopher', sans-serif; */
 
     <!-- fomr data-base -->
     <script>
-      async function sendApplication2(form) {
-        let response = await fetch("service_files/form_seminar.php", {
+      async function sendApplication1(form) {
+        let response = await fetch("service_files/form_seminar1.php", {
           method: "POST",
           body: new FormData(form),
         });
         let result = await response.text();
-        if (result === "ok") {
-          alert("Seccess!");
+        if (result == "ok") {
+          alert("Success!");
         } else {
-          info.innerText =
-            "Пользователь с этим адресом электронной почты уже зарегистрирован";
+          alert(
+            "Пользователь с этим адресом электронной почты уже зарегистрирован"
+          );
+        }
+      }
+      async function sendApplication2(form) {
+        let response = await fetch("service_files/form_seminar2.php", {
+          method: "POST",
+          body: new FormData(form),
+        });
+        let result = await response.text();
+        if (result == "ok") {
+          alert("Success!");
+        } else {
+          alert(
+            "Пользователь с этим адресом электронной почты уже зарегистрирован"
+          );
         }
       }
     </script>

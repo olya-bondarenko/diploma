@@ -16,7 +16,7 @@ if ($mysqli == false) {
   if ($result->num_rows != 0) {
     print("exist");
   } else {
-    $mysqli->query("INSERT INTO `tabl_seminar2` (`name`, `lastname`, `phone`,  `email`, `comment`) VALUES ('$name2', '$lastname2', '$phone2', '$email2', '$comment2')");
+    $mysqli->query("INSERT INTO `tabl_seminar2`( `name`, `lastmane`, `phone`, `email`, `comment`) VALUES ('$name2', '$lastname2', '$phone2', '$email2', '$comment2')");
     print("ok");
   }
-}
+};
