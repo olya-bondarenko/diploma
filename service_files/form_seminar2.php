@@ -8,8 +8,8 @@ if ($mysqli == false) {
 } else {
   $name2 = $_POST["name2"];
   $lastname2 = $_POST["lastname2"];
-  $phone2 = $_POST["phone2"];
-  $email2 = $_POST["email2"];
+  $phone2 = trim($_POST["phone2"]);
+  $email2 = trim(mb_strtolower($_POST["email2"]));
   $comment2 = $_POST["comment2"];
 
   $result = $mysqli->query("SELECT * FROM `tabl_seminar2` WHERE `email`='$email2'");
